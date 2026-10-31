@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tufan — Prototype</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #02060f; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  #game {
+    width: min(100vw, calc(100vh * 16 / 9));
+    height: min(100vh, calc(100vw * 9 / 16));
+    image-rendering: auto; display: block; outline: none;
+  }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="720" tabindex="0"></canvas>
+<!-- Systems are kept in separate files: data, core (input/audio), sprites, fx,
+     combat, player, enemies, seeds, level, ui, game -->
+<script src="js/data.js"></script>
+<script src="js/core.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/combat.js"></script>
+<script src="js/player.js"></script>
+<script src="js/enemies.js"></script>
+<script src="js/seeds.js"></script>
+<script src="js/backgrounds.js"></script>
+<script src="js/level.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/game.js"></script>
+<script>document.getElementById('game').focus();</script>
+</body>
+</html>
